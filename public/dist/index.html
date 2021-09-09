@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pat Buddies</title>
+  <link rel="stylesheet" href="/main.2b755954.css">
+  <link rel="stylesheet" href="/reset.6d189117.css">
+<script src="/main.2b755954.js"></script><script src="/reset.6d189117.js"></script></head>
+
+<body>
+  <header class="menu_toolbar">
+    <nav class="toolbar">
+      <ul>
+        <h4>Element :</h4>
+        <li>Add :
+          <div class="button__container">
+            <button class="add_element"> + </button>
+          </div>
+        </li>
+        <li>Remove :
+          <div class="button__container">
+            <button class="delete_element"> - </button>
+          </div>
+        </li>
+        <li>
+          <select name="element_selector" id="element_selector">
+            <option value="0">--Select Element--</option>
+          </select>
+        </li>
+      </ul>
+      <div class="element_informations">
+        <ul>
+          <h4>Element Propery : </h4>
+          <li>
+            color value :
+            <div class="button__container">
+              <input type="color" class="elem_mod_color">
+            </div>
+          </li>
+          <li><span class="elem_color_value">---</span>
+          </li>
+        </ul>
+        <ul>
+          Position :
+          <li>
+            X = <span class="elem_pos_x">---</span>
+            <div class="button__container">
+              <button class="mvt_controller left">&larr;</button>
+              <button class="mvt_controller right">&rarr;</button>
+            </div>
+          </li>
+          <li>
+            Y = <span class="elem_pos_y">---</span>
+            <div class="button__container">
+              <button class="mvt_controller left">&uarr;</button>
+              <button class="mvt_controller right">&darr;</button>
+            </div>
+          </li>
+        </ul>
+        <ul>Size :
+          <li>
+            Width = <span class="elem_width_value">---</span>
+            <div class="button__container">
+              <button class="size_controller plus">+</button>
+              <button class="size_controller minus">-</button>
+            </div>
+          </li>
+          <li>
+            Height = <span class="elem_height_value">---</span>
+            <div class="button__container">
+              <button class="size_controller plus">+</button>
+              <button class="size_controller minus">-</button>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          Orientation :
+          <li>
+            <input id="range_round" type="range" class="range" min="0" max="50" value="0">
+          </li>
+          <li>
+            Rotation = <span class="elem_rotate_value">---</span>
+            <div class="button__container">
+              <button class="rot_controller plus">+</button>
+              <button class="rot_controller minus">-</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <nav id="element_list">
+    <button>show list</button>
+    <ul></ul>
+  </nav>
+
+  <main class="main_container">
+    <div class="elements_container">
+    </div>
+  </main>
+
+  <template class="new_element_tpl">
+    <div class="element_content">
+      <div class="element" data-index-number="">
+        <!-- handlers to rotate : -->
+        <div class="clickable rotate">
+          <div class="clickable handler rotate_top rotateX"></div>
+          <div class="clickable handler rotate_right rotateY"></div>
+          <div class="clickable handler rotate_bottom rotateX"></div>
+          <div class="clickable handler rotate_left rotateY"></div>
+        </div>
+        <!-- handler to move : -->
+        <div class="clickable center"></div>
+        <!-- handlers to resize corners : -->
+        <div class="clickable handler top_left resize_angles"></div>
+        <div class="clickable handler top_right resize_angles"></div>
+        <div class="clickable handler bottom_right resize_angles"></div>
+        <div class="clickable handler bottom_left resize_angles"></div>
+        <!-- handlers to resize borders : -->
+        <div class="clickable handler resize_top resize_axes"></div>
+        <div class="clickable handler resize_right resize_axes"></div>
+        <div class="clickable handler resize_bottom resize_axes"></div>
+        <div class="clickable handler resize_left resize_axes"></div>
+        <!-- handlers to round : -->
+        <div class="clickable top_left round_handler"></div>
+        <div class="clickable top_right round_handler"></div>
+        <div class="clickable bottom_right round_handler"></div>
+        <div class="clickable bottom_left round_handler "></div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </template>
+  <footer>
+    <script src="/app.56908c73.js"></script>
+    <script src="/elements.c2ff99d9.js"></script>
+    <script src="/handleMouse.d0965657.js"></script>
+    <script src="/handleKeys.916e7f37.js"></script>
+    <script src="/modifications.f480978f.js"></script>
+    <script src="/shapes.04d114c9.js"></script>
+    <script src="/toolbar.81876f3c.js"></script>
+  </footer>
+</body>
+
+</html>

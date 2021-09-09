@@ -1,0 +1,274 @@
+/* TOOLBAR LEFT--------- */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #e7e7e7;
+    box-sizing: border-box;
+    border: solid 1px black;
+    border-radius: 5%;
+}
+.toolbar li {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px;
+}
+.menu_toolbar {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.menu_toolbar button {
+    width: 30px;
+    height: 30px;
+}
+h4 {
+    text-align: center;
+}
+
+body {
+    height: 100vh;
+    max-height: none;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+}
+
+.main_container {
+    width: 100%;
+    height: 100%;
+    background-color: #e7e7e7;
+}
+
+#element_list {
+    /* width: 15%; */
+    min-height: 5%;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+}
+
+#element_list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+}
+
+#element_list li {
+    list-style: none;
+    border: 1px solid black;
+    padding: 5%;
+}
+#element_list li:hover {
+    background-color: rgba(0, 255, 0, 0.212);
+    cursor: grabbing;
+}
+
+/* .elements_container {
+    background-color: #e7e7e7;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+} */
+.elements_container {
+    /* background-color: #e7e7e7; */
+    height: 100vh;
+    width: 100vh;
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+    border: solid 1px black;
+}
+
+.element_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.element {
+    height: 50%;
+    width: 50%;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    /* border: solid 1px black; */
+    box-shadow: 0px 0px 10px rgba(59, 0, 0, 0.2);
+}
+
+.selected {
+    border: solid 10px #a1a1a1 inset;
+}
+
+.handler {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-color: rgba(153, 153, 153, 0.2);
+    visibility: hidden;
+}
+
+.handler:hover {
+    border: solid 1px black;
+}
+
+.top_left {
+    top: -15px;
+    left: -15px;
+}
+
+.top_left:hover {
+    cursor: nwse-resize;
+}
+
+.top_right {
+    top: -15px;
+    right: -15px;
+}
+
+.top_right:hover {
+    cursor: nesw-resize;
+}
+
+.bottom_right {
+    bottom: -15px;
+    right: -15px;
+}
+
+.bottom_right:hover {
+    cursor: nwse-resize;
+}
+
+.bottom_left {
+    bottom: -15px;
+    left: -15px;
+}
+
+.bottom_left:hover {
+    cursor: nesw-resize;
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 140, 0, 0);
+}
+
+.center:hover {
+    background-color: rgba(153, 153, 153, 0.2);
+    cursor: grab;
+    cursor: grabbing;
+}
+
+.resize_top {
+    left: calc(50% - 15px);
+    top: -15px;
+}
+.resize_top:hover {
+    cursor: ns-resize;
+}
+
+.resize_right {
+    left: calc(100% - 15px);
+    top: calc(50% - 15px);
+}
+.resize_right:hover {
+    cursor: ew-resize;
+}
+
+.resize_bottom {
+    left: calc(50% - 15px);
+    top: calc(100% - 15px);
+}
+.resize_bottom:hover {
+    cursor: ns-resize;
+}
+
+.resize_left {
+    left: -15px;
+    top: calc(50% - 15px);
+}
+.resize_left:hover {
+    cursor: ew-resize;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.rotate {
+    width: 150%;
+    height: 150%;
+    border: solid 1px black;
+    border-radius: 50%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    visibility: hidden;
+}
+
+.rotate>div {
+    background-color: rgba(153, 153, 153, 0.2);
+}
+
+.rotate_top {
+    left: calc(50% - 15px);
+    top: -15px;
+}
+
+.rotate_right {
+    left: calc(100% - 15px);
+    top: calc(50% - 15px);
+}
+
+.rotate_bottom {
+    left: calc(50% - 15px);
+    top: calc(100% - 15px);
+}
+
+.rotate_left {
+    left: -15px;
+    top: calc(50% - 15px);
+}
+
+.round_handler {
+    display: none;
+    background-color: rgba(255, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+.round_handler:hover {
+    border: solid 1px black;
+}
+.top_left.round_handler {
+    border-top-left-radius: 100%;
+    top: -15px;
+    left: -15px;
+}
+.top_right.round_handler {
+    border-top-right-radius: 100%;
+    top: -15px;
+    right: -15px;
+}
+.bottom_left.round_handler {
+    border-bottom-left-radius: 100%;
+    bottom: -15px;
+    left: -15px;
+}
+.bottom_right.round_handler {
+    border-bottom-right-radius: 100%;
+    right: -15px;
+    bottom: -15px;
+}
+
+/*# sourceMappingURL=/main.2b755954.css.map */
